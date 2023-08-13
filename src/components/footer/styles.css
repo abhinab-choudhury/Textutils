@@ -1,0 +1,28 @@
+.footer {
+    margin-top:60px;
+    background-image:linear-gradient(171deg, #6c757d, #232636);
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+li > a {
+    font-weight:700;
+    color: white;
+    text-decoration: none;
+    font-size:15px;
+    margin-left: 10px;
+    margin: 20px;
+}
+
+li > a:hover{
+    color: black
+}
+.copywrite {
+    color:white;
+    display: flex;
+    justify-content:end;
+}
