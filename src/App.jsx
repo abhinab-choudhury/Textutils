@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className='image-Heading'>
+      <div className='image-Heading m-3'>
           <a href="https://img.icons8.com" target="_blank">
                 <img className='mb-1' width="100" height="100" src="https://img.icons8.com/plasticine/100/bookmark--v2.png" alt="bookmark--v2" />
           </a>

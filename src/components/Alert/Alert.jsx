@@ -1,2 +1,8 @@
 
-export default 
+export default function Alert() {
+    return (
+    <>
+    
+    </>
+    )
+}
