@@ -5,7 +5,7 @@ export default function Footer() {
         <>
             <div className="footer container-fluid p-4">
                 <div className="copywrite d-flex justify-content-end text-muted">
-                    Version-1.1.0 
+                    Version-1.3.0 
                 </div> 
                 <ul className="social-media text-mutted">
                     <li>
