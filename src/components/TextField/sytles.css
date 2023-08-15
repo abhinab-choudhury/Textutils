@@ -19,6 +19,9 @@
     width: inherit;
     font-size: 30px;    
 }
+.text-info{
+    display: none;
+}
 button {
     margin: 10px;
 }
