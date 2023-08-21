@@ -1,13 +1,10 @@
-import { useState } from 'react'
 import './styles.css'
 
-export default function Navbar() {
+export default function Navbar(props) {
 
-    const [background, setBackground] = useState('light')
-    const [toggleText, setToggleText] = useState('Enable Dark mode')
     return (
         <div className='container-flex'>
-            <nav className={`navbar navbar-${background} bg-${background}`}>
+            <nav className={`navbar navbar-${props.mode} bg-${props.mode}`}>
             <div className='container-fluid'>
                 <a className='navbar-brand' href='/'>
                 <div className="logos mx-2">
@@ -18,17 +15,8 @@ export default function Navbar() {
                 
                 </a>
                 <div className="form-check form-switch">
-                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                    onClick={() => {
-                        if(background == 'light') {
-                            setBackground('dark')
-                            setToggleText('Enable Light mode')
-                        } else {
-                            setBackground('light')
-                            setToggleText('Enable Dark mode')
-                        }
-                    }}/>
-                    <label className={`form-check-label text-${background == 'light' ? 'dark' : 'light'}`} htmlFor="flexSwitchCheckChecked">{toggleText}</label>
+                    <input className="form-check-input my-3 " type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.ToggleMode}/>
+                    <label className={`form-check-label text-${props.mode == 'light' ? 'dark' : 'light'}`} htmlFor="flexSwitchCheckChecked">{props.modeText}</label>
                 </div>
             </div>
             </nav>

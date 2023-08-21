@@ -1,27 +1,18 @@
-.form-floating>.textfield{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 900;
-    font-size: 16px;
-    height: 200px;
+#floatingTextarea2{
+    color: black;
     display: flex;
-    justify-content: center;  
-   
+    margin: auto;
+    height: 200px;
+    font-size: 20px;
+    padding-top: 50px;
 }
-.form-floating>.features {
-    margin-bottom: 170px;
+.btn {
+    font-size: 17px;
 }
-.form-floating>.textfield-lable {
-    margin-left: 10px;
+label{
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 
-.submitform {
-    text-align: center;
-    width: inherit;
-    font-size: 30px;    
-}
-.text-info{
-    display: none;
-}
-button {
-    margin: 10px;
-}
+    

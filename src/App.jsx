@@ -1,28 +1,34 @@
+import { useState } from 'react'
 import './App.css'
-import reactLogo from './assets/react.svg'
 import Navbar from './components/Navbar/Navbar'
 import TextField from './components/TextField/TextField'
-import Footer from './components/footer/Footer'
+// import Alert from './components/Alert/Alert'
+
 
 function App() {
 
-  
+  const [mode, setMode] = useState('light')
+  const [modeText, setModeText] = useState('Dark Mode')
+
+  const ToggleMode = () => {
+    if(mode === 'light') {
+      setMode('dark')
+      setModeText('Light Mode')
+      // setAlertText('Dark Mode Enabled.')
+      document.getElementById("root").style.backgroungColor = 'black'
+    } else {
+      setMode('light')
+      setModeText('Dark Mode')
+      // setAlertText('Light Mode Enabled.')
+      document.getElementById("root").style.backgroungColor = 'white'
+    }
+  }
 
   return (
     <>
-      <Navbar />
-      <div className='image-Heading m-3'>
-          <a href="https://img.icons8.com" target="_blank">
-                <img className='mb-1' width="100" height="100" src="https://img.icons8.com/plasticine/100/bookmark--v2.png" alt="bookmark--v2" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-              <img src={reactLogo} width="100" height="100"className="logo react" alt="React logo" />
-          </a>
-      </div>
-      <h1 className='d-flex justify-content-center'> Textutils + React </h1>
-      
-      <TextField />
-      <Footer />
+      <Navbar mode={mode} modeText={modeText} ToggleMode={ToggleMode}/>
+      <hr style={{padding:'0px', margin:'0px'}}/>
+      <TextField mode={mode} modeText={modeText}/>
     </>
   )
 }
