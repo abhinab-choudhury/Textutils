@@ -18,18 +18,22 @@ export default function TextField(props) {
         localStorage.setItem('textEntered', textEntered)
     }, [textEntered])
 
-    const eraseText = () => {
+    const eraseText = (event) => {
+        event.preventDefault();
         setTextEntered("")
     }
     
-    const TO_LOWERCASE = () => {
+    const TO_LOWERCASE = (event) => {
+        event.preventDefault();
         setTextEntered(textEntered.toLowerCase())
 
     }
-    const TO_UPPERCASE = () => {
+    const TO_UPPERCASE = (event) => {
+        event.preventDefault();
         setTextEntered(textEntered.toUpperCase())
     }
-    const CAPATALIZE = () => {
+    const CAPATALIZE = (event) => {
+        event.preventDefault();
         let text = textEntered
         // split the above string into an array of strings 
         // whenever a blank space is encountered
@@ -46,16 +50,19 @@ export default function TextField(props) {
         const Capatalize = arr.join(" ")
         setTextEntered(Capatalize)
     }
-    const COPY = () => {
+    const COPY = (event) => {
+        event.preventDefault();
         navigator.clipboard.writeText(textEntered.replace(/<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g, ""))
         alert("Text Coppied!")
     }
 
-    const COPY_HTML = () => {
+    const COPY_HTML = (event) => {
+        event.preventDefault();
         navigator.clipboard.writeText(textEntered)
         alert("Html Text Copied!!")
     }
-    const REMOVE_PUNCATIONS = () => {
+    const REMOVE_PUNCATIONS = (event) => {
+        event.preventDefault();
         let text = textEntered
         let newText = ""
         let arr = text.split("")
@@ -71,7 +78,8 @@ export default function TextField(props) {
         }
         setTextEntered(newText)
     }
-    const REMOVE_BLANKSPACE = () => {
+    const REMOVE_BLANKSPACE = (event) => {
+        event.preventDefault();
         let text = textEntered
         // split the above string into an array of strings 
         // whenever a blank space is encountered
@@ -83,7 +91,8 @@ export default function TextField(props) {
         }
         setTextEntered(newText)
     }
-    const REMOVE_EXTRA_BLANKSPCAE = () => {
+    const REMOVE_EXTRA_BLANKSPCAE = (event) => {
+        event.preventDefault();
         let text = textEntered
         // split the above string into an array of strings 
         // whenever a blank space is encountered
