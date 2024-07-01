@@ -142,7 +142,7 @@ export default function TextField(props) {
                                     <button style={{ fontSize: '17px' }} onClick={eraseText} >Clear Textarea</button>
                                 </div>
                             </div>
-                            <ReactQuill ref={quillRef} className="textarea pb-4"  theme="snow" value={textEntered} onChange={setTextEntered} />
+                            <ReactQuill ref={quillRef} className="textarea pb-5"  theme="snow" value={textEntered} onChange={setTextEntered} />
 
                             <button onClick={TO_LOWERCASE}> All Lower-Case</button>
                             <button onClick={TO_UPPERCASE}> All Upper-Case</button>
