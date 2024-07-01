@@ -1,7 +1,8 @@
 .footer {
     height: 100px;
 }
-.social-media{
+
+.social-media {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,20 +12,25 @@
     list-style-type: none;
 }
 
-li > a {
-    font-weight:700;
+
+
+li>a {
+    font-weight: 700;
     color: white;
     text-decoration: none;
-    font-size:15px;
+    font-size: 15px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-li > a:hover{
+li>a:hover {
     color: black
 }
-.copywrite {
-    color:white;
-    display: flex;
-    justify-content:end;
+
+p#copyright {
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: blue;
+    background: inherit;
 }

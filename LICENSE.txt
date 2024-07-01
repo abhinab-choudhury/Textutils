@@ -1,0 +1,12 @@
+All Rights Reserved License
+Project Name: [iNoteBook]
+Repository: [https://github.com/abhinab-choudhury/Textutils]
+
+Copyright (c) [2024] [iNoteBook]
+All rights reserved.
+
+Permission is hereby granted to use this software for personal, commercial purposes only. Any reproduction, modification, distribution, or use for commercial purposes is strictly prohibited without the prior written consent of the copyright holder.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For permissions or other inquiries, please contact: [abhinabchoudhury291@gmail.com]

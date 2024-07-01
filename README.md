@@ -1,7 +1,7 @@
 
 ![1681202690584](https://github.com/abhinab-choudhury/Textutils/assets/132006996/82e5285f-d851-47dc-9e7b-321f0cafd20a)
 
-# Textutils
+# TextUtils: Your Text Toolbox
 
 I'd be glad to create a README.md text incorporating the technologies added and improvements made:
 

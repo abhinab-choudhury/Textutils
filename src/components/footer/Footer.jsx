@@ -36,6 +36,7 @@ export default function Footer(props) {
                         </a> 
                     </li>
                 </ul> 
+                <p id="copyright">{`© ${new Date().getFullYear()} TextUtils. All rights reserved.`}</p>
             </div>
         </>
     )
