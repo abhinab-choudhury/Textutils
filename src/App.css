@@ -1,0 +1,30 @@
+.image-Heading{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+}
+
+.textfield {
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 415px) {
+    .infobar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textarea {
+        width: 90vw;
+        height: 400px;
+    }
+    body{
+        font-size: small;
+    }
+
+}
