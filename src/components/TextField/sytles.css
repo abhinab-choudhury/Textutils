@@ -6,3 +6,61 @@
 .btn {
     font-size: 17px;
 }
+
+/* Base button styles */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover state */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Active state (click effect) */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus state (for accessibility) */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Disabled state */
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Additional styles for a gradient effect */
+button.gradient {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+}
+
+button.gradient:hover {
+    background: linear-gradient(45deg, #0056b3, #0096c7);
+}
+
+button.gradient:active {
+    background: linear-gradient(45deg, #003f7f, #007ba7);
+}
+
+button.gradient:focus {
+    box-shadow: 0 0 0 3px rgba(0, 213, 255, 0.5);
+}

@@ -1,6 +1,6 @@
 import "./sytles.css"
 import reactLogo from '../../assets/svg/react.svg'
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import ReactQuill from 'react-quill'
 
@@ -8,8 +8,15 @@ import 'react-quill/dist/quill.snow.css'
 
 export default function TextField(props) {
 
-    const [textEntered, setTextEntered] = useState("")
+    const [textEntered, setTextEntered] = useState(() => {
+        return localStorage.getItem("textEntered") || ""
+    })
+
     const quillRef = useRef(null);
+
+    useEffect(() => {
+        localStorage.setItem('textEntered', textEntered)
+    }, [textEntered])
 
     const eraseText = () => {
         setTextEntered("")
@@ -130,18 +137,19 @@ export default function TextField(props) {
                                     </div>
                                 </div>
                                 <div className="mx-2">
-                                    <button className="mr-1 m-1 btn btn-outline-secondary rounded-md" style={{ fontSize: '17px' }} type="button" onClick={COPY} >Copy</button>
-                                    <button className="mr-1 m-1 btn btn-outline-secondary rounded-md" style={{ fontSize: '17px' }} type="button" onClick={COPY_HTML} >Copy Html</button>
-                                    <button className="mx-2 m-1 btn btn-primary rounded-md" style={{ fontSize: '17px' }} type="button" onClick={eraseText} >Clear Textarea</button>
+                                    <button className="mr-1 m-1 btn btn-outline-secondary rounded-md" style={{ fontSize: '17px', padding: '10px 20px' }} type="button" onClick={COPY} >Copy</button>
+                                    <button className="mr-1 m-1 btn btn-outline-secondary rounded-md" style={{ fontSize: '17px', padding: '10px 20px' }} type="button" onClick={COPY_HTML} >Copy Html</button>
+                                    <button style={{ fontSize: '17px' }} onClick={eraseText} >Clear Textarea</button>
                                 </div>
                             </div>
                             <ReactQuill ref={quillRef} className="textarea pb-4"  theme="snow" value={textEntered} onChange={setTextEntered} />
-                            <button className="mx-1 my-2 btn btn-outline-primary" type="button" onClick={TO_LOWERCASE}> All Lower-Case</button>
-                            <button className="mx-1 my-2 btn btn-outline-primary" type="button" onClick={TO_UPPERCASE}> All Upper-Case</button>
-                            <button className="mx-1 my-2 btn btn-outline-primary" type="button" onClick={CAPATALIZE}> Capatalize</button>
-                            <button className="mx-1 my-2 btn btn-outline-primary" type="button" onClick={REMOVE_PUNCATIONS}> Remove Puncations</button>
-                            <button className="mx-1 my-2 btn btn-outline-primary" type="button" onClick={REMOVE_BLANKSPACE} >Remove Blankspace</button>
-                            <button className="mx-1 my-2 btn btn-outline-primary" type="button" onClick={REMOVE_EXTRA_BLANKSPCAE}> Remove Extra Blankspcae </button>
+
+                            <button onClick={TO_LOWERCASE}> All Lower-Case</button>
+                            <button onClick={TO_UPPERCASE}> All Upper-Case</button>
+                            <button onClick={CAPATALIZE}> Capatalize</button>
+                            <button onClick={REMOVE_PUNCATIONS}> Remove Puncations</button>
+                            <button onClick={REMOVE_BLANKSPACE} >Remove Blankspace</button>
+                            <button onClick={REMOVE_EXTRA_BLANKSPCAE}> Remove Extra Blankspcae </button>
 
                         </div>
                     </form>
